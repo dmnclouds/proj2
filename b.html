@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demo</title>
+	
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    <script src="jquery.flipster.min.js"></script>
+    
+    <link href="jquery.flipster.min.css" type="text/css" rel="stylesheet">
+	
+	<script src="script.js"></script>
+<style>
+body {
+  color: #222;
+  -webkit-transition: background-color 800ms ease;
+  transition: background-color 800ms ease;
+}
+
+body.dark {
+  background-color: #222;
+  color: #fff;
+}
+
+body.dark img {
+  -webkit-filter: brightness(70%);
+  filter: brightness(70%);
+}
+
+/* more dark mode styles here */
+</style>
+    
+</head>
+<body>
+
+	<h1>Flipster & Dark or Light Plugin Demo</h1>
+   
+    <div id="myslider">
+
+      <ul>
+
+        <li><img src="img/filet.jpeg" class="img" width="600px" height="600px"><li>
+        <li><img src="img/rib.jpg" class="img" width="600px" height="600px"><li>
+        <li><img src="img/tbone.jpg" class="img" width="600px" height="600px"><li>
+        <li><img src="img/strip.jpeg" class="img" width="600px" height="600px"><li>
+        <li><img src="img/port.jpg" class="img" width="600px" height="600px"><li>
+        <li><img src="img/tender.jpg" class="img" width="600px" height="600px"><li>
+
+      </ul>
+  
+    </div>
+
+<button class="dark-button">Dark</button>
+<button class="light-button" hidden="hidden">Light</button>
+
+  <script>
+
+  $("#myslider").flipster({
+
+    start:0,
+    autoplay:2000,
+    loop:true,
+    style:"coverflow"
+
+  });
+
+var darkMode;
+
+if (localStorage.getItem('dark-mode')) {  
+  // if dark mode is in storage, set variable with that value
+  darkMode = localStorage.getItem('dark-mode');  
+} else {  
+  // if dark mode is not in storage, set variable to 'light'
+  darkMode = 'light';  
+}
+
+// set new localStorage value
+localStorage.setItem('dark-mode', darkMode);
+
+
+if (localStorage.getItem('dark-mode') == 'dark') {
+  // if the above is 'dark' then apply .dark to the body
+  $('body').addClass('dark');  
+  // hide the 'dark' button
+  $('.dark-button').hide();
+  // show the 'light' button
+  $('.light-button').show();
+}
+
+$('.dark-button').on('click', function() {  
+  $('.dark-button').hide();
+  $('.light-button').show();
+  $('body').addClass('dark');  
+  // set stored value to 'dark'
+  localStorage.setItem('dark-mode', 'dark');
+});
+
+$('.light-button').on('click', function() {  
+  $('.light-button').hide();
+  $('.dark-button').show();
+  $('body').removeClass('dark');
+  // set stored value to 'light'
+  localStorage.setItem('dark-mode', 'light');   
+});
+
+  </script>
+ 
+</body>
+</html>

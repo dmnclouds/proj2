@@ -1,0 +1,189 @@
+body {
+    font-family: Arial;
+    color: #333;
+    padding: 50px;
+    line-height: 1.5em;
+}
+
+button { 
+    padding: 10px;
+}
+
+div {
+    padding: 20px;
+}
+
+#gamecontrol, #score {
+    background-color: rgb(249, 244, 252);
+}
+
+#game {
+    background-color:#dff8f5;
+}
+#actions {
+    background-color: rgb(218, 226, 247);
+}
+
+/* The side navigation menu */
+.sidenav {
+    height: 100%; /* 100% Full-height */
+    width: 0; /* 0 width - change this with JavaScript */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Stay on top */
+    top: 0; /* Stay at the top */
+    left: 0;
+    background-color: #111; /* Black*/
+    overflow-x: hidden; /* Disable horizontal scroll */
+    padding-top: 60px; /* Place content 60px from the top */
+    transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+  }
+  
+  /* The navigation menu links */
+  .sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+  }
+  
+  /* When you mouse over the navigation links, change their color */
+  .sidenav a:hover {
+    color: #f1f1f1;
+  }
+  
+  /* Position and style the close button (top right corner) */
+  .sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+  }
+  
+  /* Style page content - use this if you want to push the page content to the right when you open the side navigation */
+  #main {
+    transition: margin-left .5s;
+    padding: 20px;
+  }
+  
+  /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+  @media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+  }
+  
+  body {
+
+  color:#222;
+
+  -webkit-transition: background-color800ms ease;
+
+  transition: background-color800ms ease;
+
+}
+
+
+body.dark {
+
+  background-color:#222;
+
+  color:#fff;
+
+}
+
+
+body.dark img {
+
+  -webkit-filter: brightness(70%);
+
+  filter: brightness(70%);
+}
+
+ @import url("https://fonts.googleapis.com/css?family=Raleway:400,400i,700");
+body {
+  font-family: Raleway, sans-serif;
+  font-size: 18px;
+  line-height: 1.7;
+  background-color: #eaeaea;
+  color: #333;
+  -webkit-transition: background-color 800ms ease;
+  transition: background-color 800ms ease;
+}
+body.dark {
+  background-color: #222;
+  color: #eaeaea;
+}
+body.dark .masthead,
+
+body.dark .footer {
+  background-color: #121212;
+}
+body.dark img {
+  -webkit-filter: brightness(70%);
+          filter: brightness(70%);
+}
+
+h2 {
+  font-size: 3rem;
+  line-height: 1.2;
+}
+
+
+img.small {
+  width: 60%;
+  float: right;
+  padding: 1rem;
+}
+
+.masthead,
+.footer {
+  padding: 0 1rem;
+  background-color: #ddd;
+  -webkit-transition: background-color 800ms ease;
+  transition: background-color 800ms ease;
+}
+
+.masthead-inner,
+.footer-inner {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+          align-items: center;
+  max-width: 900px;
+  margin: auto;
+}
+
+.nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+button {
+  border: 1px solid #333;
+  padding: 0.5rem;
+  background: #333;
+  border-radius: 5px;
+  -webkit-transition: background 200ms ease;
+  transition: background 200ms ease;
+  color: #eaeaea;
+}
+button:hover {
+  background: rgba(51, 51, 51, 0.8);
+}
+
+.dark-button i {
+  -webkit-transform: rotate(35deg);
+          transform: rotate(35deg);
+  margin-left: 0.3rem;
+}
+
+main {
+  padding: 1rem;
+  max-width: 900px;
+  margin: auto;
+}
